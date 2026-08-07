@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinária - Sistema de Gestão</title>
+    <!-- Chart.js para gráficos nos relatórios -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== MENU LATERAL ===== -->
+<nav class="menu">
+    <h2>🐾 Clínica Vet</h2>
+    <a href="#" data-page="dashboard" class="active">📊 Dashboard</a>
+    <a href="#" data-page="tutores">👤 Tutores</a>
+    <a href="#" data-page="pets">🐶 Pets</a>
+    <a href="#" data-page="consultas">📅 Consultas</a>
+    <a href="#" data-page="prontuario">📋 Prontuário</a>
+    <a href="#" data-page="atendimentos">🩺 Atendimentos</a>
+    <a href="#" data-page="vacinas">💉 Vacinas</a>
+    <a href="#" data-page="relatorios">📈 Relatórios</a>
+</nav>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+<div class="main-content">
+    <!-- Cada página é uma div .page -->
+    <div id="page-dashboard" class="page active"></div>
+    <div id="page-tutores" class="page"></div>
+    <div id="page-pets" class="page"></div>
+    <div id="page-consultas" class="page"></div>
+    <div id="page-prontuario" class="page"></div>
+    <div id="page-atendimentos" class="page"></div>
+    <div id="page-vacinas" class="page"></div>
+    <div id="page-relatorios" class="page"></div>
+</div>
+
+<!-- ===== MODAL GENÉRICO ===== -->
+<div id="modal" class="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <h3 id="modal-title">Título</h3>
+            <button class="close-btn" onclick="fecharModal()">&times;</button>
+        </div>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
