@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Veterinária - Sistema de Gestão</title>
-    <!-- Chart.js para gráficos nos relatórios -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clínica Veterinária - Sistema de Gestão</title>
+        <!-- Chart.js para gráficos nos relatórios -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- Bootstrap 5.3 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-<!-- ===== MENU LATERAL ===== -->
-<nav class="menu">
-    <h2>🐾 Clínica Vet</h2>
-    <a href="#" data-page="dashboard" class="active">📊 Dashboard</a>
-    <a href="#" data-page="tutores">👤 Tutores</a>
-    <a href="#" data-page="pets">🐶 Pets</a>
-    <a href="#" data-page="consultas">📅 Consultas</a>
-    <a href="#" data-page="prontuario">📋 Prontuário</a>
-    <a href="#" data-page="atendimentos">🩺 Atendimentos</a>
-    <a href="#" data-page="vacinas">💉 Vacinas</a>
-    <a href="#" data-page="relatorios">📈 Relatórios</a>
-</nav>
+        <!-- ===== MENU LATERAL ===== -->
+        <nav class="menu">
+            <h2>Sistema de Clínica Veterinária</h2>
+            <a href="#" data-page="dashboard" class="active"><i class="bi bi-clipboard-data"></i> Dashboard</a>
+            <a href="#" data-page="tutores"><i class="bi bi-person"></i> Tutores</a>
+            <a href="#" data-page="veterinarios"><i class="bi bi-heart-pulse"></i> Veterinários</a>
+            <a href="#" data-page="pets"><i class="bi bi-balloon-heart"></i> Pets</a>
+            <a href="#" data-page="consultas"><i class="bi bi-calendar-date"></i> Consultas</a>
+            <a href="#" data-page="prontuario"><i class="bi bi-clipboard-pulse"></i> Prontuário</a>
+            <a href="#" data-page="atendimentos"><i class="bi bi-clipboard-heart"></i> Atendimentos</a>
+            <a href="#" data-page="vacinas"><i class="bi bi-bandaid"></i> Vacinas</a>
+            <a href="#" data-page="relatorios"><i class="bi bi-pie-chart"></i> Relatórios</a>
+            <a href="#" data-page="chatbot"><i class="bi bi-robot"></i> Chat IA</a>
+        </nav>
 
-<!-- ===== CONTEÚDO PRINCIPAL ===== -->
-<div class="main-content">
-    <!-- Cada página é uma div .page -->
-    <div id="page-dashboard" class="page active"></div>
-    <div id="page-tutores" class="page"></div>
-    <div id="page-pets" class="page"></div>
-    <div id="page-consultas" class="page"></div>
-    <div id="page-prontuario" class="page"></div>
-    <div id="page-atendimentos" class="page"></div>
-    <div id="page-vacinas" class="page"></div>
-    <div id="page-relatorios" class="page"></div>
-</div>
-
-<!-- ===== MODAL GENÉRICO ===== -->
-<div id="modal" class="modal-overlay">
-    <div class="modal">
-        <div class="modal-header">
-            <h3 id="modal-title">Título</h3>
-            <button class="close-btn" onclick="fecharModal()">&times;</button>
+        <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+        <div class="main-content">
+            <!-- Cada página é uma div .page -->
+            <div id="page-dashboard" class="page active"></div>
+            <div id="page-tutores" class="page"></div>
+            <div id="page-veterinarios" class="page"></div>
+            <div id="page-pets" class="page"></div>
+            <div id="page-consultas" class="page"></div>
+            <div id="page-prontuario" class="page"></div>
+            <div id="page-atendimentos" class="page"></div>
+            <div id="page-vacinas" class="page"></div>
+            <div id="page-relatorios" class="page"></div>
+            <div id="page-chatbot" class="page"></div>
         </div>
-        <div id="modal-body"></div>
-    </div>
-</div>
 
-<script src="main.js"></script>
-</body>
+        <!-- ===== MODAL BOOTSTRAP ===== -->
+        <div class="modal fade" id="modalBootstrap" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalBootstrapTitle">Título</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBootstrapBody">
+                        Conteúdo
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
 </html>
