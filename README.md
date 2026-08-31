@@ -46,4 +46,28 @@ es1_t1-frontend/
 └─style.css
 ```
 
+### Descrição da estrutura de pastas
 
+- **js**
+
+Guarda todos os arquivos Javascript para layout e funções das páginas.
+
+- **js/services**
+
+Chamadas de API para `POST` ou `GET` e também cache para carregar as seções.
+
+- **js/pages**
+
+Renderiza todas as páginas disponíveis na barra lateral da aplicação.
+
+- **js/chatbot**
+
+Pasta dedicada à implementação do chatbot.
+
+- **js/components**
+
+Componentes reutilizáveis, como modal de cadastro ou consulta de pets, veterinários e etc.
+
+- **js/utils**
+
+Algumas configurações a nível de front, não substitui a validação feita no back, apenas mostra visualmente pro usuário.
